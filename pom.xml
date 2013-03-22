@@ -56,26 +56,39 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <thrift.version>0.8.0</thrift.version>
     <hypertable.version>0.9.5.6</hypertable.version>
+    <orion.version>1.0.0</orion.version>
   </properties>
 
   <modules>
+
     <!--module>build-tools</module-->
-    <module>cassandra</module>
+
     <module>core</module>
+<!--
+    <module>cassandra</module>
     <module>hbase</module>
     <module>hypertable</module>
     <module>dynamodb</module>
     <module>elasticsearch</module>
+-->
+
+	<module>mongodb</module>
+	<module>orion</module>
+
     <!--<module>gemfire</module>-->
+<!--
     <module>infinispan</module>
     <module>jdbc</module>
     <module>mapkeeper</module>
     <module>mongodb</module>
     <module>orientdb</module>
+-->
     <!--module>nosqldb</module-->
-    <module>redis</module>
+<!-- 
+   <module>redis</module>
     <module>voldemort</module>
     <module>distribution</module>
+-->
   </modules>
 
   <build>
