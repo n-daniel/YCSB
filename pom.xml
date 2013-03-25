@@ -60,7 +60,6 @@
   </properties>
 
   <modules>
-
     <!--module>build-tools</module-->
 
     <module>core</module>
@@ -70,10 +69,11 @@
     <module>hypertable</module>
     <module>dynamodb</module>
     <module>elasticsearch</module>
+	<module>mongodb</module>
 -->
 
-	<module>mongodb</module>
-	<module>orion</module>
+<!--	<module>orion</module> -->
+	<module>aerospike</module>
 
     <!--<module>gemfire</module>-->
 <!--
@@ -85,7 +85,8 @@
 -->
     <!--module>nosqldb</module-->
 
-	<module>redis</module>
+<!--	<module>redis</module> -->
+
 <!-- 
     <module>voldemort</module>
     <module>distribution</module>
