@@ -5,6 +5,12 @@ if [ -z "$THREADS" ]; then
   THREADS=1
 fi
 
+# if not set GRANULARITY use default (1sec)
+if [ -z "$GRANULARITY" ]; then
+  GRANULARITY=1000
+fi
+
+
 # clean up 
 CLEANUP=$1.$THREADS.* 
 for f0 in $CLEANUP
@@ -18,5 +24,5 @@ FILES=workloads/*
 for f in $FILES
 do
 	bin/ycsb load $1 -P $f $2 $3 $4 $5 $6 $7 $8 $9
-	bin/ycsb run $1 -P $f $2 $3 $4 $5 $6 $7 $8 $9 -threads $THREADS > $1.$THREADS.$(basename $f)
+	bin/ycsb run $1 -P $f $2 $3 $4 $5 $6 $7 $8 $9 -threads $THREADS -p measurementtype=timeseries -p timeseries.granularity=$GRANULARITY > $1.$THREADS.$(basename $f)
 done
