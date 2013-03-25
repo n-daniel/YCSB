@@ -25,6 +25,18 @@ export THREADS=1000
 ./runtest.sh redis -p redis.host=localhost
 
 #####################################à####
+# MONGODB
+##########################################
+export THREADS=1
+./runtest.sh mongodb
+
+export THREADS=100
+./runtest.sh mongodb
+
+export THREADS=1000
+./runtest.sh mongodb
+
+#####################################à####
 # ORION
 ##########################################
 export THREADS=1
@@ -39,13 +51,12 @@ export THREADS=1000
 #####################################à####
 # COLLECT
 ##########################################
-zip collect.zip orion.* redis.* aerospike.*
+zip collect.zip orion.* redis.* aerospike.* mongodb.*
 
 #####################################à####
 # CLEANUP
 ##########################################
 ./cleanup.sh aerospike
 ./cleanup.sh redis
+./cleanup.sh mongodb
 ./cleanup.sh orion
-
-
