@@ -1,6 +1,18 @@
 #!/bin/bash
 
 #####################################à####
+# AEROSPIKE
+##########################################
+export THREADS=1
+./runtest.sh aerospike
+
+export THREADS=100
+./runtest.sh aerospike
+
+export THREADS=1000
+./runtest.sh aerospike
+
+#####################################à####
 # REDIS
 ##########################################
 export THREADS=1
@@ -27,11 +39,13 @@ export THREADS=1000
 #####################################à####
 # COLLECT
 ##########################################
-zip collect.zip orion.* redis.*
+zip collect.zip orion.* redis.* aerospike.*
 
 #####################################à####
 # CLEANUP
 ##########################################
+./cleanup.sh aerospike
 ./cleanup.sh redis
 ./cleanup.sh orion
+
 
