@@ -33,12 +33,15 @@ sleep 3
 
 export THREADS=1
 ./runtest.sh mongodb
+./cleandb_mongodb.sh
 
 export THREADS=100
 ./runtest.sh mongodb
+./cleandb_mongodb.sh
 
 export THREADS=1000
 ./runtest.sh mongodb
+./cleandb_mongodb.sh
 
 service mongodb stop
 sleep 3
