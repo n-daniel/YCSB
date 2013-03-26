@@ -27,6 +27,10 @@ export THREADS=1000
 #####################################à####
 # MONGODB
 ##########################################
+
+service mongodb start
+sleep 3
+
 export THREADS=1
 ./runtest.sh mongodb
 
@@ -35,6 +39,9 @@ export THREADS=100
 
 export THREADS=1000
 ./runtest.sh mongodb
+
+service mongodb stop
+sleep 3
 
 #####################################à####
 # ORION
