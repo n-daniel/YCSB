@@ -4,7 +4,7 @@
 # AEROSPIKE
 ##########################################
 
-sudo /etc/init.d/citrusleaf start
+/etc/init.d/citrusleaf start
 sleep 3
 
 export THREADS=1
@@ -16,7 +16,7 @@ export THREADS=100
 export THREADS=1000
 ./runtest.sh aerospike
 
-sudo /etc/init.d/citrusleaf stop
+/etc/init.d/citrusleaf stop
 sleep 3
 
 #####################################à####
@@ -35,7 +35,7 @@ export THREADS=1000
 # MONGODB
 ##########################################
 
-sudo service mongodb start
+service mongodb start
 sleep 3
 
 export THREADS=1
@@ -50,7 +50,7 @@ export THREADS=1000
 ./runtest.sh mongodb
 ./cleandb_mongodb.sh
 
-sudo service mongodb stop
+service mongodb stop
 sleep 3
 
 #####################################à####
