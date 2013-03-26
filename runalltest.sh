@@ -74,7 +74,8 @@ export THREADS=1000
 #####################################à####
 # COLLECT
 ##########################################
-zip collect.zip orion.* redis.* aerospike.* mongodb.*
+now=$(date +"%m_%d_%Y")
+zip collect_$now.zip orion.* redis.* aerospike.* mongodb.*
 
 #####################################à####
 # CLEANUP
