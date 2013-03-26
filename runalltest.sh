@@ -11,7 +11,7 @@ fi
 ##########################################
 
 /etc/init.d/citrusleaf start
-sleep 3
+sleep 10
 
 export THREADS=1
 ./runtest.sh aerospike
@@ -23,7 +23,7 @@ export THREADS=1000
 ./runtest.sh aerospike
 
 /etc/init.d/citrusleaf stop
-sleep 3
+sleep 10
 
 #####################################à####
 # REDIS
