@@ -86,7 +86,7 @@ export THREADS=1000
 #####################################à####
 # COLLECT
 ##########################################
-now=$(date +"%m_%d_%Y")
+now=$(date +"%Y%m%d_%H_%M_%S")
 zip collect_$now.zip orion.* redis.* aerospike.* mongodb.* hbase.*
 
 #####################################à####
