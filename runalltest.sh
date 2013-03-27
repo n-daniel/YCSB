@@ -6,9 +6,9 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-#####################################à####
-# AEROSPIKE
-##########################################
+echo "##########################################"
+echo "# AEROSPIKE"
+echo "##########################################"
 
 /etc/init.d/citrusleaf start
 sleep 10
@@ -25,9 +25,10 @@ export THREADS=1000
 /etc/init.d/citrusleaf stop
 sleep 10
 
-#####################################à####
-# REDIS
-##########################################
+echo "##########################################"
+echo "# REDIS"
+echo "##########################################"
+
 export THREADS=1
 ./runtest.sh redis -p redis.host=localhost
 
@@ -37,9 +38,9 @@ export THREADS=100
 export THREADS=1000
 ./runtest.sh redis -p redis.host=localhost
 
-#####################################à####
-# MONGODB
-##########################################
+echo "##########################################"
+echo "# MONGODB"
+echo "##########################################"
 
 service mongodb start
 sleep 3
@@ -59,9 +60,10 @@ export THREADS=1000
 service mongodb stop
 sleep 3
 
-#####################################à####
-# HBASE
-##########################################
+echo "##########################################"
+echo "# HBASE"
+echo "##########################################"
+
 export THREADS=1
 ./runtest.sh hbase
 
@@ -71,9 +73,10 @@ export THREADS=100
 export THREADS=1000
 ./runtest.sh hbase
 
-#####################################à####
-# ORION
-##########################################
+echo "##########################################"
+echo "# ORION"
+echo "##########################################"
+
 export THREADS=1
 ./runtest.sh orion -p hosts=orion:localhost:9001:DEFAULT
 
