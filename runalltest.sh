@@ -60,6 +60,18 @@ service mongodb stop
 sleep 3
 
 #####################################à####
+# HBASE
+##########################################
+export THREADS=1
+./runtest.sh hbase -p redis.host=localhost
+
+export THREADS=100
+./runtest.sh hbase -p redis.host=localhost
+
+export THREADS=1000
+./runtest.sh hbase -p redis.host=localhost
+
+#####################################à####
 # ORION
 ##########################################
 export THREADS=1
@@ -75,7 +87,7 @@ export THREADS=1000
 # COLLECT
 ##########################################
 now=$(date +"%m_%d_%Y")
-zip collect_$now.zip orion.* redis.* aerospike.* mongodb.*
+zip collect_$now.zip orion.* redis.* aerospike.* mongodb.* hbase.*
 
 #####################################à####
 # CLEANUP
@@ -84,3 +96,5 @@ zip collect_$now.zip orion.* redis.* aerospike.* mongodb.*
 ./cleanup.sh redis
 ./cleanup.sh mongodb
 ./cleanup.sh orion
+./cleanup.sh hbase
+
