@@ -62,10 +62,13 @@
   <modules>
     <!--module>build-tools</module-->
 
-    <module>core</module>
+	<module>core</module>
 <!--
     <module>cassandra</module>
-    <module>hbase</module>
+-->
+
+	<module>hbase</module>
+<!--
     <module>hypertable</module>
     <module>dynamodb</module>
     <module>elasticsearch</module>
