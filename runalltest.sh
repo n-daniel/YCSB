@@ -63,13 +63,13 @@ sleep 3
 # HBASE
 ##########################################
 export THREADS=1
-./runtest.sh hbase -p redis.host=localhost
+./runtest.sh hbase
 
 export THREADS=100
-./runtest.sh hbase -p redis.host=localhost
+./runtest.sh hbase
 
 export THREADS=1000
-./runtest.sh hbase -p redis.host=localhost
+./runtest.sh hbase
 
 #####################################à####
 # ORION
