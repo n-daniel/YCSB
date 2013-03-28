@@ -23,6 +23,8 @@ export THREADS=600
 ./runtest.sh aerospike
 
 /etc/init.d/citrusleaf stop
+./clean_ipcs.sh
+./clean_ipcs.sh
 sleep 10
 
 echo "##########################################"
