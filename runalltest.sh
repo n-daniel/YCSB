@@ -19,7 +19,7 @@ export THREADS=1
 export THREADS=100
 ./runtest.sh aerospike
 
-export THREADS=1000
+export THREADS=600
 ./runtest.sh aerospike
 
 /etc/init.d/citrusleaf stop
